@@ -76,6 +76,9 @@ include_once 'inc/menu_walker.inc.php';
 include_once 'inc/page_walker.inc.php';
 include_once 'inc/share-study.inc.php';
 include_once 'inc/sidebar.inc.php';
+include_once 'inc/amp.inc.php';
+
+
 
 
 
