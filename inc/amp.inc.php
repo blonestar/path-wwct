@@ -71,14 +71,17 @@ function page_for_posts() {
 }
 */
 
+
+/*
+ * IMPORTANT
+ * Disable front page redirect for AMP
+ */
 function disable_canonical_redirect_for_front_page( $redirect ) {
     if ( is_page() && $front_page = get_option( 'page_on_front' ) ) {
         if ( is_page( $front_page ) ) {
             $redirect = false;
         }
     }
-    //var_dump($redirect);
-    //die( '34343434' );
     return $redirect;
 }
 add_filter( 'redirect_canonical', 'disable_canonical_redirect_for_front_page' );
