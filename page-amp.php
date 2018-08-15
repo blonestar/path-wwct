@@ -1,8 +1,16 @@
 <?php get_header('amp'); ?>
 <?php the_post(); ?>
-<?php $sidebar = wwct_get_sidebar_data(); ?>
+<?php // $sidebar = wwct_get_sidebar_data(); ?>
 
-<?php if ( ! empty_content($post->post_content)) { ?>
+
+
+
+<?php the_content() ?>
+<?php
+/*
+ if ( ! empty_content($post->post_content)) {
+	?>
+	
 <section class="main-content">
 	<div class="container">
 		<div class="row">
@@ -30,7 +38,8 @@
 		</div>
 	</div>
 </section>
-<?php } ?>
+<?php }
+*/ ?>
 
 <?php if( have_rows('template_blocks') ): ?>
 	<?php get_template_blocks(get_the_ID()) ?>

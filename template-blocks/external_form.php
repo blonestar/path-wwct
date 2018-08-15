@@ -1,4 +1,6 @@
 
+<?php if ( ! get_query_var( 'amp' ) ) { ?>
+
 <<?php echo $tag.$id.$class ?><?php echo $style ?>>
 
 <div class="<?php echo $container ?>">
@@ -40,3 +42,9 @@
 </div>
 
 </<?php echo $tag ?>>
+
+<?php } else { // AMP 
+// nothing to display
+?>
+
+<?php } ?>
